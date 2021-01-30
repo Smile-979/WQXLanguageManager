@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "WQXLanguageManager"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of WQXLanguageManager."
+  spec.summary      = "几行代码搞定iOS语言国际化，支持多国语言手动切换。"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/WQXLanguageManager"
+  spec.homepage     = "https://github.com/Smile-979/WQXLanguageManager"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +38,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # spec.license      = "MIT (example)"
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,7 +52,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "*****" => "*****" }
+  spec.author             = { "Smile-979" => "wenqunxiang@sina.com" }
   # Or just: spec.author    = "*****"
   # spec.authors            = { "*****" => "*****" }
   # spec.social_media_url   = "https://twitter.com/*****"
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/WQXLanguageManager.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/Smile-979/WQXLanguageManager.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "WQXLanguageManager/**/*.{h,m}"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
