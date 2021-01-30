@@ -18,3 +18,6 @@
 [WQXLanguageManager wqx_setCurrentAppLanguageWithKey:@"zh-Hans"];
 8. 显示文本：
 label.text = [WQXLanguageManager wqx_localizedStringWithKey:@"hello, world"];
+
+# 许可证
+WQXLanguageManager 使用 MIT 许可证，详情见 LICENSE 文件。
