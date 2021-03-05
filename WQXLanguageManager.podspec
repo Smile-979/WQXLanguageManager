@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WQXLanguageManager"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "几行代码搞定iOS语言国际化，支持多国语言手动切换。"
 
   # This description is used to generate tags and improve search results.
