@@ -55,12 +55,26 @@
  */
 + (NSString *)wqx_getCurrentAppLanguage {
     NSString *language = [[NSUserDefaults standardUserDefaults] objectForKey:@"WQXCurrentLanguageKey"];
+    // 获取系统首选语言
     if (!language || ![language isKindOfClass:[NSString class]]) {
-        language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        language = [[NSLocale preferredLanguages] firstObject];
     }
-    if (![[WQXLanguageManager wqx_sharedManager].wqx_languages containsObject:language]) {
+    // 由于iOS获取的系统语言会添加地区，而我们自己添加的不会加地区，所以这里处理一下（修复无法正确跟随系统语言的问题）
+    BOOL contains = NO;
+    for (NSString *str in [WQXLanguageManager wqx_sharedManager].wqx_languages) {
+        if ([language containsString:str]) {
+            language = str;
+            contains = YES;
+            break;
+        }
+    }
+    // 如果语言包里面不包含系统当前语言，那么默认使用英语
+    if (!contains) {
         language = @"en";
     }
+//    if (![[WQXLanguageManager wqx_sharedManager].wqx_languages containsObject:language]) {
+//        language = @"en";
+//    }
     return language;
 }
 
